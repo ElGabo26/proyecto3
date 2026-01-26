@@ -53,15 +53,20 @@ MODELO_L='llama3.1'
 
 correcto="./benchMark/correcto"
 incorrecto="./benchMark/Incorrecto"
+
 correctoFiles=os.listdir(correcto)
+correctoFiles=[f"{correcto}/{x}" for x in correctoFiles]
+
 incorrectoFiles=os.listdir(incorrecto)
+incorrectoFiles=[f"{incorrecto}/{x}" for x in incorrectoFiles]
 paths=correctoFiles+incorrectoFiles
 
 trys=5
 
 if __name__ == '__main__':
+    print(paths)
     final=[] 
-    for i in trys:
+    for i in range(trys):
         print(f"INTENTO {i+1}")
         try:
             print(f"MODELO {MODELO_D}")
