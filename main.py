@@ -15,7 +15,7 @@ def getResponse(rootPath:str,client,modelName,temperature:float):
     contexto_documentos = f"DE UN  TOTAL DE:{len(archivos)} DOCUEMTOS CON LA SIGUIENTE INFORMACION"
     
     for archivo in archivos[-1]:
-        contexto_documentos +=f"DOCUMENTO DE NOMBRE:{archivo.split(".")[0]}\nCONTENIDO:\n"
+        contexto_documentos +=f"DOCUMENTO DE NOMBRE:{archivo}\nCONTENIDO:\n"
         contexto_documentos += get_file_content_from_path(f"{rootPath}/{archivo}")
         
     system_instruction = build_prompt(contexto_documentos)
