@@ -69,9 +69,9 @@ trys=5
 if __name__ == '__main__':
     final=[] 
     for i in range(trys):
-        r=[]
         print(f"INTENTO {i+1}")
         for MODELO_D  in models:
+            r=[]
             print(MODELO_D)
             try:
                 print(f"MODELO {MODELO_D}")
