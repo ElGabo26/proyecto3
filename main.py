@@ -70,11 +70,11 @@ if __name__ == '__main__':
         print(f"INTENTO {i+1}")
         try:
             print(f"MODELO {MODELO_D}")
-            r=list(lambda x: getResponse(x,
+            r=list(map(lambda x: getResponse(x,
                                          client,
                                          MODELO_D,
                                          0.1),
-                   paths)
+                   paths))
             resultD=pd.DataFrame(r)
             resultD['model']=MODELO_D
             
@@ -84,11 +84,11 @@ if __name__ == '__main__':
             resultD=pd.DataFrame()
         try:
             print(f"MODELO {MODELO_L}")
-            r1=list(lambda x: getResponse(x,
+            r1=list(map(lambda x: getResponse(x,
                                          client,
                                          MODELO_L,
                                          0.1),
-                   paths)
+                   paths))
             resultL=pd.DataFrame(r)
             resultL['model']=MODELO_L
             
