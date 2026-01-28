@@ -50,7 +50,7 @@ client = OpenAI(
     api_key="ollama",
 )
 # MODELOS
-models=["llama3.1:8b","llama3.2:3b","deepseek-r1:1.5b","deepseek-r1:1.7b"],
+models=["llama3.1:8b","llama3.2:3b","deepseek-r1:1.5b","deepseek-r1:1.7b"]
 
 
 correcto="./benchMark/correcto"
