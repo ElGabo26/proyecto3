@@ -71,7 +71,7 @@ if __name__ == '__main__':
     for i in range(trys):
         print(f"INTENTO {i+1}")
         for MODELO_D  in models:
-            r=[]
+            r1=[]
             print(MODELO_D)
             try:
                 print(f"MODELO {MODELO_D}")
@@ -88,9 +88,9 @@ if __name__ == '__main__':
                 print("ERROR")
                 print(e)
                 resultD=pd.DataFrame()
-            r.append(resultD)
+            r1.append(resultD)
                 
-        results=pd.concat(r)
+        results=pd.concat(r1)
         results['try']=i
         final.append(results)
     
