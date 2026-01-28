@@ -90,6 +90,7 @@ if __name__ == '__main__':
                 resultD=pd.DataFrame()
             print(resultD.shape)
             r1.append(resultD)
+            resultD.to_csv("./{MODELO_D}_{i}.csv")
                 
         results=pd.concat(r1)
         results['try']=i
