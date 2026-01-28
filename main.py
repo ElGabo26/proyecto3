@@ -38,6 +38,7 @@ def getResponse(rootPath:str,client,modelName,temperature:float):
         resultado["answer"]= f"Error en el servidor local: {str(e)}"
     t1=time()
     resultado['time']=t1-t0
+    resultado['caso']=rootPath
     return resultado
 
 
