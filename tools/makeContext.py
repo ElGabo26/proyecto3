@@ -8,8 +8,8 @@ from openai import OpenAI
 
 
 # --- cargar índice ---
-INDEX_FILE = r".\proyecto3\tools\kb_index.npz"
-META_FILE = r".\proyecto3\tools\kb_meta.json"
+INDEX_FILE = r"workspace\proyecto3\tools\kb_index.npz"
+META_FILE = r"workspace\proyecto3\tools\kb_meta.json"
 
 data = np.load(INDEX_FILE)
 embeddings = data["embeddings"]  # shape: (N, dim)
@@ -54,7 +54,7 @@ def limpiar_respuesta_deepseek(texto):
 
 
 
-with open(r".\proyecto3\tools\instruccions.txt", "r", encoding="utf-8") as f:
+with open(r"workspace\proyecto3\tools\instruccions.txt", "r", encoding="utf-8") as f:
         instruccions = f.read()
     
 def build_prompt(question):
