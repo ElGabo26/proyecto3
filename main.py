@@ -23,7 +23,7 @@ def getResponse(rootPath:str,client,modelName,temperature:float):
     resultado['prompt']=contexto_documentos
     
     try:
-        print(modelName)
+        
         t0=time()    
         response = client.chat.completions.create(
         model=modelName,
@@ -72,7 +72,7 @@ if __name__ == '__main__':
         print(f"INTENTO {i+1}")
         r1=[]
         for MODELO_D  in models:
-            print(MODELO_D)
+            
             try:
                 print(f"MODELO {MODELO_D}")
                 r=list(map(lambda x: getResponse(x,
@@ -88,6 +88,7 @@ if __name__ == '__main__':
                 print("ERROR")
                 print(e)
                 resultD=pd.DataFrame()
+            print(resultD.shape)
             r1.append(resultD)
                 
         results=pd.concat(r1)
