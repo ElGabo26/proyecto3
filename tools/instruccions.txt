@@ -18,23 +18,23 @@ INSTRUCCIÓN DE FORMATO OBLIGATORIA:
     2. DOCUMENTOS OBLIGATORIOS SEGÚN EL CASO:
        Analiza qué tipo de trámite es y exige los anexos correspondientes:
        
-       CASO A: Salida al Exterior DENTRO de Proyecto:
+       CASO A (5 DOCUMENTOS): Salida al Exterior DENTRO de Proyecto:
        - Anexo 1 (Formato solicitud de viáticos EPN) con aval del Jefe de Unidad.
        - Anexo 2 (Formulario para salidas al exterior dentro de proyectos) firmado por Director Proyecto.
        - Anexo 3 (Memorando director del proyecto al VIPS)
        - Anexo 10 (Planificación de recuperación de clases)
        - Carta de invitación/aceptación.
        
-       CASO B: Salida al Exterior FUERA de Proyecto (Auspicio):
+       CASO B (3 DOCUMENTOS): Salida al Exterior FUERA de Proyecto (Auspicio):
        - Anexo 1 (Formato solicitud de viáticos EPN)
        - Anexo 8 (Formulario para salidas al exterior fuera de proyectos) firmado por el profesor.
        - Anexo 9 (Memorando del Jefe del Departamento al VIPS)
        
-       CASO C: Personal Técnico Administrativo (Proyectos Externos):
+       CASO C (2 DOCUMENTOS): Personal Técnico Administrativo (Proyectos Externos):
        - Anexo 1 (Formato solicitud de viáticos EPN)
        - Anexo 7 (Formulario para salidas al exterior - Colaboradores técnicos).
        
-       CASO D: Pago de Inscripciones (Sin viaje):
+       CASO D (2 DOCUMENTOS): Pago de Inscripciones (Sin viaje):
        - Anexo 5 (Formulario para pagos de inscripción).
        - Anexo 6 (Formulario de pagos al exterior).
 
