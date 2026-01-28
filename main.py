@@ -50,7 +50,7 @@ client = OpenAI(
     api_key="ollama",
 )
 # MODELOS
-models=["llama3.1:8b","llama3.2:3b","deepseek-r1:1.5b","deepseek-r1:1.7b"]
+models=["llama3.1:8b","llama3.2:3b","deepseek-r1:1.5b","deepseek-r1:7b"]
 
 
 correcto="./benchMark/correcto"
@@ -70,8 +70,8 @@ if __name__ == '__main__':
     final=[] 
     for i in range(trys):
         print(f"INTENTO {i+1}")
+        r1=[]
         for MODELO_D  in models:
-            r1=[]
             print(MODELO_D)
             try:
                 print(f"MODELO {MODELO_D}")
