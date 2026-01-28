@@ -64,7 +64,7 @@ incorrectoFiles=[f"{incorrecto}/{x}" for x in incorrectoFiles]
 
 paths=correctoFiles+incorrectoFiles
 
-trys=5
+trys=2
 
 if __name__ == '__main__':
     final=[] 
