@@ -7,16 +7,16 @@ from tools.readDocumentsPath import get_file_content_from_path
 from tools.makeContext import limpiar_respuesta_deepseek, build_prompt
 from tools.workPaths import openPath
 
-
 def getResponse(rootPath:str,client,modelName,temperature:float):
     resultado={"model":modelName,"temperature":temperature,
                "context":"","prompt":"","answer":""}
     archivos=openPath(rootPath)
-    contexto_documentos = f"DE UN  TOTAL DE:{len(archivos)} DOCUEMTOS CON LA SIGUIENTE INFORMACION"
+    contexto_documentos = f"DE UN  TOTAL DE:{len(archivos[-1])} DOCUEMTOS CON LA SIGUIENTE INFORMACION\n"
     
     for archivo in archivos[-1]:
         contexto_documentos +=f"DOCUMENTO DE NOMBRE:{archivo}\nCONTENIDO:\n"
         contexto_documentos += get_file_content_from_path(f"{rootPath}/{archivo}")
+        contexto_documentos += "\n"
         
     system_instruction = build_prompt(contexto_documentos)
     resultado['context']=system_instruction
