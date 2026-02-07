@@ -51,7 +51,7 @@ client = OpenAI(
     api_key="ollama",
 )
 # MODELOS
-models=["deepseek-r1:7b","deepseek-r1:1.5b"]
+models=["deepseek-r1:1.5b"]
 
 root ="./bencMark"
 folders=getPaths(root)
