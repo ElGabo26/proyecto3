@@ -9,7 +9,7 @@ from tools.workPaths import openPath, getPaths
 
 
 def getResponse(rootPath:str,client,modelName,temperature:float):
-    print(',',end="|")
+    print('|',end="|")
     resultado={"model":modelName,"temperature":temperature,
                "context":"","prompt":"","answer":""}
     archivos=openPath(rootPath)
@@ -51,7 +51,7 @@ client = OpenAI(
     api_key="ollama",
 )
 # MODELOS
-models=["deepseek-r1:1.5b","deepseek-r1:7b"]
+models=["deepseek-r1:7b","deepseek-r1:1.5b"]
 
 root ="./bencMark"
 folders=getPaths(root)
@@ -61,6 +61,7 @@ trys=2
 
 if __name__ == '__main__':
     final=[] 
+    
     for i in range(trys):
         print(f"INTENTO {i+1}")
         r1=[]
