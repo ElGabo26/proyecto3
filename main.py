@@ -5,7 +5,7 @@ from openai import OpenAI
 import pandas as pd
 from tools.readDocumentsPath import get_file_content_from_path
 from tools.makeContext import limpiar_respuesta_deepseek, build_prompt
-from tools.workPaths import openPath
+from tools.workPaths import openPath, getPaths
 
 
 def getResponse(rootPath:str,client,modelName,temperature:float):
@@ -52,17 +52,9 @@ client = OpenAI(
 # MODELOS
 models=["llama3.1:8b","llama3.2:3b","deepseek-r1:1.5b","deepseek-r1:7b"]
 
+root ="./bencMark"
+folders=getPaths(root)
 
-correcto="./benchMark/correcto"
-incorrecto="./benchMark/Incorrecto"
-
-correctoFiles=os.listdir(correcto)
-correctoFiles=[f"{correcto}/{x}" for x in correctoFiles]
-
-incorrectoFiles=os.listdir(incorrecto)
-incorrectoFiles=[f"{incorrecto}/{x}" for x in incorrectoFiles]
-
-paths=correctoFiles+incorrectoFiles
 
 trys=2
 
@@ -79,19 +71,21 @@ if __name__ == '__main__':
                                             client,
                                             MODELO_D,
                                             0.1),
-                    paths))
+                    folders))
                 resultD=pd.DataFrame(r)
                 resultD['model']=MODELO_D
+                resultD.to_csv(f"./{MODELO_D}_{i}.csv")
                 
                 
             except Exception as e:
                 print("ERROR")
                 print(e)
-                resultD=pd.DataFrame()
+                resultD=None
             print(resultD.shape)
             r1.append(resultD)
-            resultD.to_csv(f"./{MODELO_D}_{i}.csv")
+        
                 
+        results=[x for x in results if not x]
         results=pd.concat(r1)
         results['try']=i
         final.append(results)
