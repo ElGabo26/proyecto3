@@ -11,8 +11,8 @@ def openPath(rootPath:str)-> tuple[list,str,str]:
 
 
 def getPaths(root):
-    pathsCorrecto=[f"{root}/correcto/{x}" for  x in os.listdir(root+"./correcto")]
-    pathsIncorrecto=[f"{root}/Incorrecto/{x}" for  x in os.listdir(root+"./Incorrecto")]
+    pathsCorrecto=[f"{root}/correcto/{x}" for  x in os.listdir(root+"/correcto")]
+    pathsIncorrecto=[f"{root}/Incorrecto/{x}" for  x in os.listdir(root+"/Incorrecto")]
     pathsC=[]
     pathsCF=[]
     pathsI=[]
