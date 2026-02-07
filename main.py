@@ -9,6 +9,7 @@ from tools.workPaths import openPath, getPaths
 
 
 def getResponse(rootPath:str,client,modelName,temperature:float):
+    print(',',end="|")
     resultado={"model":modelName,"temperature":temperature,
                "context":"","prompt":"","answer":""}
     archivos=openPath(rootPath)
