@@ -14,7 +14,7 @@ def getResponse(rootPath:str,client,modelName,temperature:float):
                "context":"","prompt":"","answer":""}
     archivos=openPath(rootPath)
     contexto_documentos = f"DE UN  TOTAL DE:{len(archivos)} DOCUMENTOS CON LA SIGUIENTE INFORMACION"
-    
+    print("made context")
     for archivo in archivos[-1]:
         contexto_documentos +=f"DOCUMENTO DE NOMBRE:{archivo}\nCONTENIDO:\n"
         contexto_documentos += get_file_content_from_path(f"{rootPath}/{archivo}")
@@ -37,6 +37,7 @@ def getResponse(rootPath:str,client,modelName,temperature:float):
         resultado['answer'] = response.choices[0].message.content
         t1=time()
     except Exception as e:
+        print(e)
         t1, t0=0,0
         resultado["answer"]= f"Error en el servidor local: {str(e)}"
     
