@@ -1,6 +1,7 @@
 import re
 import os
 from time import time
+import random
 from openai import OpenAI 
 import pandas as pd
 from tools.readDocumentsPath import get_file_content_from_path
@@ -56,7 +57,7 @@ models=["deepseek-r1:1.5b"]
 
 root ="./bencMark"
 folders=getPaths(root)
-
+folders= random.sample(folders,32)
 
 trys=2
 
