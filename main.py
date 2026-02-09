@@ -89,8 +89,8 @@ if __name__ == '__main__':
         r1.append(resultD)
         
                 
-        results=[x for x in r1 if not x]
-        results=pd.concat(results)
+        
+        results=pd.concat(r1)
         results['try']=i
         final.append(results)
     
