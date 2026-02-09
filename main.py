@@ -57,7 +57,7 @@ models=["deepseek-r1:1.5b"]
 
 root ="./bencMark"
 folders=getPaths(root)
-folders= random.sample(folders,3)
+folders= random.sample(folders,32)
 
 trys=2
 
